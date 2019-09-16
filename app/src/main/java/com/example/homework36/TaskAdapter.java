@@ -5,10 +5,17 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
+
 public class TaskAdapter extends RecyclerView.Adapter<TaskViewHolder> {
+    ArrayList<Task> tasks;
+    public TaskAdapter(){
+        tasks=new ArrayList<>();
+    }
     @NonNull
     @Override
     public TaskViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+
         return null;
     }
 
