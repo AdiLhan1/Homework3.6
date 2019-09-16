@@ -12,11 +12,11 @@ public class TaskDetailsActivity extends AppCompatActivity {
     static  final String DETAILS_KEY="details_key";
     EditText title,description,prichina,doctor;
     CheckBox checkBox;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_task_details);
+        setupView();
     }
     private void setupView(){
         title=findViewById(R.id.details_title);

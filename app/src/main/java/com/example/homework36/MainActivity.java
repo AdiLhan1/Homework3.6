@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity implements ITaskAdapterListe
         setContentView(R.layout.activity_main);
         RecyclerView recyclerView= findViewById(R.id.task_list);
         adapter = new TaskAdapter();
+        adapter.listener=this;
         recyclerView.setAdapter(adapter);
         RecyclerView.LayoutManager manager=new LinearLayoutManager(this);
         recyclerView.setLayoutManager(manager);

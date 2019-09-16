@@ -26,5 +26,6 @@ public class TaskViewHolder extends RecyclerView.ViewHolder {
     public void onBind(Task task){
         title.setText(task.title);
         checkBox.setChecked(task.checkBox);
+        this.task=task;
     }
 }

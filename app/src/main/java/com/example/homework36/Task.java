@@ -21,7 +21,7 @@ public class Task implements Serializable {
         this.descreption = descreption;
         this.prichina = prichina;
         this.doctor = doctor;
-        id=this.id;
+        this.id=id;
 
     }
 }
