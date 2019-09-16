@@ -10,14 +10,14 @@
         android:id="@+id/details_profile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Профиль"
+        android:text="Записка от врача"
         android:textSize="40sp" />
 
     <EditText
         android:id="@+id/details_title"
         android:layout_width="411dp"
         android:layout_height="63dp"
-        android:hint="Имя"
+        android:hint="Ф.И больного"
         android:textSize="40sp" />
 
     <EditText
@@ -28,22 +28,16 @@
         android:textSize="35sp" />
 
     <EditText
-        android:id="@+id/details_adress"
+        android:id="@+id/details_prichina"
         android:layout_width="match_parent"
         android:layout_height="76sp"
-        android:hint="Адрес"
+        android:hint="Причина"
         android:textSize="40sp"/>
     <EditText
-        android:id="@+id/details_hobbi"
+        android:id="@+id/details_doctor"
         android:layout_width="match_parent"
         android:layout_height="76sp"
-        android:hint="Хобби"
-        android:textSize="40sp"/>
-    <EditText
-        android:id="@+id/details_nomer"
-        android:layout_width="match_parent"
-        android:layout_height="76sp"
-        android:hint="Номер тел:"
+        android:hint="Доктор"
         android:textSize="40sp"/>
 
     <CheckBox
