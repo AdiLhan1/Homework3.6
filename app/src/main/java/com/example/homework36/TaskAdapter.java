@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class TaskAdapter extends RecyclerView.Adapter<TaskViewHolder> {
+    ITaskAdapterListener listener;
     ArrayList<Task> tasks;
     public TaskAdapter(){
         tasks=new ArrayList<>();
@@ -24,6 +25,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskViewHolder> {
         LayoutInflater inflater=LayoutInflater.from(parent.getContext());
         View view = inflater.inflate(R.layout.view_holder_task,parent,false);
         TaskViewHolder vh=new TaskViewHolder(view);
+        vh.listener =listener;
         return vh;
     }
 

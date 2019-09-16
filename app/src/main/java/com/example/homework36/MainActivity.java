@@ -10,7 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements ITaskAdapterListener{
     TaskAdapter adapter;
 
     @Override
@@ -39,5 +39,12 @@ public class MainActivity extends AppCompatActivity {
                 adapter.addTask(task);
             }
         }
+    }
+
+    @Override
+    public void openDetails(Task task) {
+        Intent intent = new Intent(MainActivity.this, NewActivity.class);
+        intent.putExtra(TaskDetailsActivity.DETAILS_KEY, task);
+        startActivity(intent);
     }
 }

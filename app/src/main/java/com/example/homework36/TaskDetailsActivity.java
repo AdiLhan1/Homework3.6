@@ -33,7 +33,7 @@ public class TaskDetailsActivity extends AppCompatActivity {
         String description1=description.getText().toString();
         String prichina1=prichina.getText().toString();
         String doctor1=doctor.getText().toString();
-        Task task = new Task(title1,description1,prichina1,doctor1);
+        Task task = new Task(0,title1,description1,prichina1,doctor1);
         intent.putExtra( "key", task);
         setResult(RESULT_OK, intent);
         finish();
