@@ -1,5 +1,7 @@
 package com.example.homework36;
 
+import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -15,17 +17,19 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskViewHolder> {
     @NonNull
     @Override
     public TaskViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-
-        return null;
+        LayoutInflater inflater=LayoutInflater.from(parent.getContext());
+        View view = inflater.inflate(R.layout.view_holder_task,parent,false);
+        TaskViewHolder vh=new TaskViewHolder(view);
+        return vh;
     }
 
     @Override
     public void onBindViewHolder(@NonNull TaskViewHolder holder, int position) {
-
+        holder.onBind(tasks.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return tasks.size();
     }
 }
