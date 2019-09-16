@@ -14,7 +14,7 @@ public class TaskViewHolder extends RecyclerView.ViewHolder {
     ITaskAdapterListener listener;
     public TaskViewHolder(@NonNull View itemView) {
         super(itemView);
-        title=itemView.findViewById(R.id.task_isDone);
+        title=itemView.findViewById(R.id.task_title1);
         checkBox=itemView.findViewById(R.id.task_isDone);
         itemView.setOnClickListener(new View.OnClickListener() {
             @Override
