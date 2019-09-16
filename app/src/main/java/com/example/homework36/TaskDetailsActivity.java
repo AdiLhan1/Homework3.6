@@ -9,6 +9,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 
 public class TaskDetailsActivity extends AppCompatActivity {
+    static  final String DETAILS_KEY="details_key";
     EditText title,description,prichina,doctor;
     CheckBox checkBox;
 
