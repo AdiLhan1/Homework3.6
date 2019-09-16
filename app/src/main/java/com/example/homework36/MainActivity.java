@@ -1,5 +1,6 @@
 package com.example.homework36;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -27,5 +28,16 @@ public class MainActivity extends AppCompatActivity {
     public void openActivity(View view) {
         Intent intent=new Intent(MainActivity.this,TaskDetailsActivity.class);
         startActivityForResult(intent,100);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode==100){
+            if(resultCode==RESULT_OK){
+                Task task=(Task) data.getSerializableExtra("key");
+                adapter.addTask(task);
+            }
+        }
     }
 }

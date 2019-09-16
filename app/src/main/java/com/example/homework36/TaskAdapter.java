@@ -14,6 +14,10 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskViewHolder> {
     public TaskAdapter(){
         tasks=new ArrayList<>();
     }
+    public void addTask(Task task){
+        tasks.add(task);
+        notifyDataSetChanged();
+    }
     @NonNull
     @Override
     public TaskViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
